@@ -35,8 +35,7 @@ var data = [
     }
 ];
 
-// A stateless functional component for an individual Recipe
-const Recipe = ({ name, ingredients, steps }) =>
+const Recipe = ({name, ingredients, steps}) =>
     <section id={name.toLowerCase().replace(/ /g, "-")}>
         <h1>{name}</h1>
         <ul className="ingredients">
@@ -52,7 +51,6 @@ const Recipe = ({ name, ingredients, steps }) =>
         </section>
     </section>
 
-// A stateless functional component for the Menu of Recipes
 const Menu = ({title, recipes}) =>
     <article>
         <header>
@@ -66,6 +64,6 @@ const Menu = ({title, recipes}) =>
     </article>
 
 ReactDOM.render(
-    <Menu recipes={data} title="Delicious Recipes" />,
+    <Menu recipes={data} title="Delicious Recipes"/>,
     document.getElementById("react-container")
 )
